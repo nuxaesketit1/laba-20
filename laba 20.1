@@ -1,10 +1,20 @@
-using namespace std;
 #include <iostream>
-int main() {
-	setlocale(LC_ALL, "Russian");
-	char C;
-	cout << "C:"; cin >> C;
-	cout << "Предшествующий символ: " << char(C - 1) << endl;
-	cout << "Следующий символ: " << char(C + 1) << endl;
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+
+	char c;
+	cout << "Vvedite C" << endl;
+	cin >> c;
+
+	int pered = (int)c - 1;
+	int posle = (int)c + 1;
+
+	cout << "Pered: " << (char)pered << ". Posle: " << (char)posle << "." << endl;
+	
 	return 0;
+
 }
