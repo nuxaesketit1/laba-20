@@ -1,15 +1,26 @@
+#include <iostream>
+#include <string>
+#include <stdio.h>
+
 using namespace std;
 
-#include <string>
-#include <iostream>
+int main()
+{
 
-int main() {
-	setlocale(LC_ALL, "Russian");
-	string S;
-	cout << "Введите строку S: ";
-	getline(cin, S);
-	for (int i = 0; i <= S.size(); i++) {
-		cout << S[i] << " ";
+	string s;
+	cout << "Vvedite S" << endl;
+	cin >> s;
+
+	string newstring;
+
+	for (int i = 0; i < s.length(); i++)
+	{
+		newstring += s[i];
+		newstring += ' ';
 	}
+
+	cout << newstring;
+	
 	return 0;
+
 }
