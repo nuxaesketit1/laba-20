@@ -1,17 +1,27 @@
+#include <iostream>
+#include <cstring>
+
 using namespace std;
 
-#include <string>
-#include <iostream>
+int main()
+{
 
-int main() {
-	setlocale(LC_ALL, "Russian");
-	string S;
-	int k = 0;
-	cout << "Введите строку S: ";
-	getline(cin, S);
-	for (int i = 0; i <= S.size(); i++) {
-		if (S[i] >= 'A' && S[i] <= 'Z') { k++; }
+	string s;
+	cout << "Vvedite S" << endl;
+	cin >> s;
+
+	int kolvo = 0;
+
+	for (int i = 0; i < s.length(); i++)
+	{
+		if (isupper(s[i]))
+		{
+			kolvo++;
+		}
 	}
-	cout << "Количество латинских букв в строке - " << k << endl;
+
+	cout << kolvo;
+	
 	return 0;
+
 }
