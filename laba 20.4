@@ -1,19 +1,32 @@
+#include <iostream>
+#include <cstring>
+
 using namespace std;
 
-#include <string>
-#include <iostream>
+int main()
+{
 
-int main() {
-	setlocale(LC_ALL, "Russian");
-	char C;
-	string S;
-	cout << "Введите строку S: ";
-	getline(cin, S);
-	cout << "Введите символ С: ";
-	cin >> C;
-	for (int i = S.size(); i >=0; i--) {
-		if (S[i]==C) { S.insert(i, 1, C); }
+	string a;
+	cout << "Vvedite S" << endl;
+	cin >> a;
+
+	char c;
+	cout << "Vvedite C" << endl;
+	cin >> c;
+
+	string newstring;
+
+	for (int i = 0; i < a.length(); i++)
+	{
+		newstring += a[i];
+		if (a[i] == c)
+		{
+			newstring += a[i];
+		}
 	}
-	cout << "Получившаяся строка: " << S << endl;
+
+	cout << newstring;
+	
 	return 0;
+
 }
